@@ -9,6 +9,9 @@ Options:
   -p, --page-size <N>       Alias for --limit (default: 30)
   -n, --cursor <id>         Page number of results (default: 1, search returns next cursor number)
 
+  --help                    Display this help message
+
+
 Note: File results are found via "fuzzy" results
 EOF
         exit 0  # Script exits successfully

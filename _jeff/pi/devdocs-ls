@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+echo Devdocs base directory is ${PI_CODING_AGENT_DIR}/.local/share/devdocs/
+
+glow ${PI_CODING_AGENT_DIR}/.local/share/devdocs/devdocs.md
