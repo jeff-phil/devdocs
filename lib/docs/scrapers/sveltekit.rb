@@ -1,7 +1,7 @@
 module Docs
-  class Svelte < UrlScraper
-    self.name = 'Svelte'
-    self.slug = 'svelte'
+  class Sveltekit < UrlScraper
+    self.name = 'SvelteKit'
+    self.slug = 'sveltekit'
     self.type = 'simple'
     self.root_path = '/'
     self.links = {
@@ -9,17 +9,17 @@ module Docs
       code: 'https://github.com/sveltejs/svelte'
     }
 
-    options[:root_title] = 'Svelte'
+    options[:root_title] = 'SvelteKit'
 
     # https://github.com/sveltejs/svelte/blob/master/LICENSE.md
     options[:attribution] = <<-HTML
-      &copy; 2016–2026 Rich Harris and contributors<br>
+      &copy; 2016–2025 Rich Harris and contributors<br>
       Licensed under the MIT License.
     HTML
 
-    self.base_url = 'https://svelte.dev/docs/svelte/'
-    html_filters.push 'svelte/entries', 'svelte/clean_html'
+    self.base_url = 'https://svelte.dev/docs/kit/'
+    html_filters.push 'sveltekit/entries', 'sveltekit/clean_html'
 
-    self.release = '5.38.10'
+    self.release = '2.59.1'
   end
 end

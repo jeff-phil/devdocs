@@ -13,7 +13,8 @@ module Docs
     options[:only_patterns] = [
         /\Afeatures\//, /\Apython-types\//, /\Areference\//,
         /\Atutorial\//, /\Aadvanced\//, /\Aasync\//,
-        /\Adeployment\//, /\Aproject-generation\//
+        /\Adeployment\//, /\Aproject-generation\//,
+        /\Arelease-notes\//
     ]
 
     html_filters.push 'fastapi/container', 'fastapi/clean_html', 'fastapi/entries'

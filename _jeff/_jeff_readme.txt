@@ -12,6 +12,10 @@ bundle install
 # bundle update
 
 bundle exec thor docs:generate pydantic --verbose
+bundle exec thor docs:generate sqlalchemy --verbose
+bundle exec thor docs:generate fastapi --verbose
+bundle exec thor docs:generate sveltekit --verbose
+bundle exec thor docs:generate daily --verbose
 
 # to view files:
 bundle exec rackup -p 9292
@@ -19,4 +23,7 @@ bundle exec rackup -p 9292
 
 cp -R public/docs/pydantic /Users/jeffrey/.pi/agent/.local/share/dedoc/docsets/
 cp -R public/docs/sqlalchemy /Users/jeffrey/.pi/agent/.local/share/dedoc/docsets/
+cp -R public/docs/fastapi /Users/jeffrey/.pi/agent/.local/share/dedoc/docsets/
+cp -R public/docs/sveltekit /Users/jeffrey/.pi/agent/.local/share/dedoc/docsets/
+cp -R public/docs/daily /Users/jeffrey/.pi/agent/.local/share/dedoc/docsets/
 cp public/docs/docs.json /Users/jeffrey/.pi/agent/.local/share/dedoc/docs.json.extras

@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+show_help() {
+        cat << EOF
+Usage: `basename $0` <pattern> [options]
+Options:
+  -c, --constraints <...>   Path filter constraints, e.g. "python/, svelte/"
+  -l, --limit <N>           Max results per page (default: 30)
+  -p, --page-size <N>       Alias for --limit (default: 30)
+  -n, --cursor <id>         Page number of results (default: 1, search returns next cursor number)
+
+Note: File results are found via "fuzzy" results
+EOF
+        exit 0  # Script exits successfully
+}
+
+# Check for --help flag
+for arg in "$@"; do
+    if [[ "$arg" == "--help" ]]; then
+        show_help
+    fi
+done
+
+if [[ $# -eq 0 ]]; then
+    show_help
+fi
+
+fffind --sock /tmp/fff-devdocs.sock "$@" 2> /dev/null
+
+if [[ $? -ne 0 ]]; then
+    echo "Error occurred"
+    echo
+    show_help
+fi
