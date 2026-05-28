@@ -115,7 +115,9 @@ while read -r dir; do
             echo "Converting: $rel_path/$filename.html"
         fi
         
+        ### HTML2MARKDOWN formats so much better than getmd, and source code is lang tagged
         html2markdown --input "$file" --output "$output_file"
+        #getmd "$file" -o "$output_file" --download-images "$target_dir/images" 
         
         if [ -f "$output_file" ]; then
             eval "$SED_CMD 's/\]\(([^)]+)\.html([^)]*)\)/](\1.md\2)/g' \"\$output_file\""
