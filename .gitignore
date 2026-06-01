@@ -3,6 +3,7 @@
 log
 tmp
 public/assets
+public/dist
 public/fonts
 public/docs/**/*
 docs/**/*
