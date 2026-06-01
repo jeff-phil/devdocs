@@ -11,6 +11,16 @@ bundle install
 # if change Gemfile, may need to do this:
 # bundle update
 
+bundle exec thor docs:list
+bundle exec thor docs:list      # List available documentations
+bundle exec thor docs:download  # Download one or more documentations
+bundle exec thor docs:manifest  # Create the manifest file used by the app
+bundle exec thor docs:generate  # Generate/scrape a documentation
+bundle exec thor docs:page      # Generate/scrape a documentation page
+bundle exec thor docs:package   # Package a documentation for use with docs:download
+bundle exec thor docs:clean     # Delete documentation packages
+
+
 bundle exec thor docs:generate pydantic --verbose
 bundle exec thor docs:generate sqlalchemy --verbose
 bundle exec thor docs:generate fastapi --verbose
